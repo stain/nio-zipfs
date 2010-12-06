@@ -45,12 +45,7 @@ import static java.nio.file.StandardCopyOption.*;
 /*
  * ZipFileSystem usage demo
  *
- * java [-cp .../zipfs.jar:./] Demo action ZipfileName [...]
- *
- * To deploy the provider, either copy the zipfs.jar into JDK/JRE
- * extensions directory or add
- *      <JDK_HOME>/demo/nio/ZipFileSystem/zipfs.jar
- * into your class path as showed above.
+ * java Demo action ZipfileName [...]
  *
  * @author Xueming Shen
  */
@@ -153,14 +148,11 @@ public class Demo {
         Action action = Action.valueOf(args[0]);
         Map<String, Object> env = env = new HashMap<>();
         if (action == Action.create)
-            env.put("createNew", true);
+            env.put("create", "true");
         if (action == Action.tlist || action == Action.twalk)
             env.put("buildDirTree", true);
+        FileSystem fs = FileSystems.newFileSystem(Paths.get(args[1]), env, null);
 
-        FileSystem fs = FileSystems.newFileSystem(
-                            URI.create("zip" + Paths.get(args[1]).toUri().toString().substring(4)),
-                            env,
-                            null);
         try {
             FileSystem fs2;
             Path path, src, dst;
@@ -207,19 +199,13 @@ public class Demo {
                 src.copyTo(dst, COPY_ATTRIBUTES);
                 break;
             case zzmove:
-                fs2 = FileSystems.newFileSystem(
-                    URI.create("zip" + Paths.get(args[2]).toUri().toString().substring(4)),
-                    env,
-                    null);
+                fs2 = FileSystems.newFileSystem(Paths.get(args[2]), env, null);
                 //sf1.getPath(args[3]).moveTo(fs2.getPath(args[3]));
                 z2zmove(fs, fs2, args[3]);
                 fs2.close();
                 break;
             case zzcopy:
-                fs2 = FileSystems.newFileSystem(
-                    URI.create("zip" + Paths.get(args[2]).toUri().toString().substring(4)),
-                    env,
-                    null);
+                fs2 = FileSystems.newFileSystem(Paths.get(args[2]), env, null);
                 //sf1.getPath(args[3]).copyTo(fs2.getPath(args[3]));
                 z2zcopy(fs, fs2, args[3]);
                 fs2.close();
