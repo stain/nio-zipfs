@@ -67,6 +67,8 @@ All rights reserved.
 Based on the zipfs demo of OpenJDK 8 by Oracle, distributed
 under a [BSD 3-Clause license](LICENSE).
 
+For details, see the files [NOTICE](NOTICE) and [LICENSE](LICENSE). 
+
 
 ## Relation to OpenJDK
 
