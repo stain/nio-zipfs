@@ -49,8 +49,6 @@ import java.nio.charset.CoderResult;
 import java.nio.charset.CodingErrorAction;
 import java.util.Arrays;
 
-import com.sun.nio.zipfs.ZipCoder;
-
 /**
  * Utility class for zipfile name and comment decoding and encoding
  *

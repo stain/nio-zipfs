@@ -48,12 +48,6 @@ import java.nio.file.DirectoryStream.Filter;
 import java.nio.file.attribute.*;
 import java.util.*;
 
-import com.sun.nio.zipfs.ZipDirectoryStream;
-import com.sun.nio.zipfs.ZipFileAttributeView;
-import com.sun.nio.zipfs.ZipFileAttributes;
-import com.sun.nio.zipfs.ZipFileSystem;
-import com.sun.nio.zipfs.ZipPath;
-
 import static java.nio.file.StandardOpenOption.*;
 import static java.nio.file.StandardCopyOption.*;
 

@@ -66,19 +66,6 @@ import java.util.zip.DeflaterOutputStream;
 import java.util.zip.ZipException;
 import java.util.zip.ZipError;
 
-import com.sun.nio.zipfs.END;
-import com.sun.nio.zipfs.Entry;
-import com.sun.nio.zipfs.EntryInputStream;
-import com.sun.nio.zipfs.EntryOutputStream;
-import com.sun.nio.zipfs.ExChannelCloser;
-import com.sun.nio.zipfs.IndexNode;
-import com.sun.nio.zipfs.ZipCoder;
-import com.sun.nio.zipfs.ZipFileAttributes;
-import com.sun.nio.zipfs.ZipFileStore;
-import com.sun.nio.zipfs.ZipFileSystem;
-import com.sun.nio.zipfs.ZipFileSystemProvider;
-import com.sun.nio.zipfs.ZipPath;
-
 import static java.lang.Boolean.*;
 import static java.nio.file.StandardOpenOption.*;
 import static java.nio.file.StandardCopyOption.*;

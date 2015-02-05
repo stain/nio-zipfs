@@ -54,11 +54,6 @@ import java.util.Set;
 import java.util.zip.ZipError;
 import java.util.concurrent.ExecutorService;
 
-import com.sun.nio.zipfs.ZipFileAttributeView;
-import com.sun.nio.zipfs.ZipFileAttributes;
-import com.sun.nio.zipfs.ZipFileSystem;
-import com.sun.nio.zipfs.ZipPath;
-
 /*
  *
  * @author  Xueming Shen, Rajendra Gutupalli, Jaya Hangal

@@ -44,9 +44,6 @@ import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.Map;
 
-import com.sun.nio.zipfs.ZipFileSystem;
-import com.sun.nio.zipfs.ZipFileSystemProvider;
-
 import static no.s11.zipfs.ZipConstants.*;
 import static no.s11.zipfs.ZipUtils.*;
 

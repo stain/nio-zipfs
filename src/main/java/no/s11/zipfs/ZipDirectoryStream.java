@@ -48,9 +48,6 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.io.IOException;
 
-import com.sun.nio.zipfs.ZipFileSystem;
-import com.sun.nio.zipfs.ZipPath;
-
 /**
  *
  * @author  Xueming Shen, Rajendra Gutupalli, Jaya Hangal

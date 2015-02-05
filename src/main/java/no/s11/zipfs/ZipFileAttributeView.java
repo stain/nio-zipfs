@@ -46,11 +46,6 @@ import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import com.sun.nio.zipfs.AttrID;
-import com.sun.nio.zipfs.ZipFileAttributeView;
-import com.sun.nio.zipfs.ZipFileAttributes;
-import com.sun.nio.zipfs.ZipPath;
-
 /*
  * @author  Xueming Shen, Rajendra Gutupalli, Jaya Hangal
  */

@@ -51,12 +51,6 @@ import java.nio.file.attribute.FileStoreAttributeView;
 import java.nio.file.attribute.BasicFileAttributeView;
 import java.util.Formatter;
 
-import com.sun.nio.zipfs.ZipFileAttributeView;
-import com.sun.nio.zipfs.ZipFileStore;
-import com.sun.nio.zipfs.ZipFileStoreAttributes;
-import com.sun.nio.zipfs.ZipFileSystem;
-import com.sun.nio.zipfs.ZipPath;
-
 /*
  *
  * @author  Xueming Shen, Rajendra Gutupalli, Jaya Hangal
