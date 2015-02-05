@@ -48,7 +48,7 @@ are met:
 
 	<name>nio-zipfs</name>
 	<description>java.util.nio zipfs file system - based on OpenJDK8u demo code</description>
-
+	<url>https://github.com/stain/nio-zipfs/</url>
 	<inceptionYear>2015</inceptionYear>
 
 	<properties>
@@ -56,10 +56,11 @@ are met:
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 
+
 	<scm>
 		<connection>scm:git:git@github.com:stain/nio-zipfs.git</connection>
 		<developerConnection>scm:git:git@github.com/stain/nio-zipfs.git</developerConnection>
-		<url>git@github.com:stain/commons-rdf.git</url>
+		<url>https://github.com/stain/nio-zipfs/</url>
 	</scm>
 
 	<licenses>
