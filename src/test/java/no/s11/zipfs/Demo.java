@@ -1,3 +1,4 @@
+package no.s11.zipfs;
 /*
  * Copyright (c) 2010 Oracle and/or its affiliates. All rights reserved.
  *

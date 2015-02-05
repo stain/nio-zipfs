@@ -38,7 +38,7 @@
  */
 
 
-package com.sun.nio.zipfs;
+package no.s11.zipfs;
 
 
 /**

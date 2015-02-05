@@ -37,13 +37,12 @@
  * this sample code.
  */
 
-package com.sun.nio.zipfs;
+package no.s11.zipfs;
 
 import java.nio.file.*;
 import java.nio.file.spi.*;
 import java.nio.file.attribute.*;
 import java.nio.file.spi.FileSystemProvider;
-
 import java.net.URI;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -51,6 +50,8 @@ import java.nio.channels.FileChannel;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+
+import com.sun.nio.zipfs.ZipFileSystemProvider;
 
 public class JarFileSystemProvider extends ZipFileSystemProvider
 {

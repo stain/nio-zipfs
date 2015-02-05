@@ -38,7 +38,7 @@
  */
 
 
-package com.sun.nio.zipfs;
+package no.s11.zipfs;
 
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
@@ -48,6 +48,8 @@ import java.nio.charset.CharsetEncoder;
 import java.nio.charset.CoderResult;
 import java.nio.charset.CodingErrorAction;
 import java.util.Arrays;
+
+import com.sun.nio.zipfs.ZipCoder;
 
 /**
  * Utility class for zipfile name and comment decoding and encoding

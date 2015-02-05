@@ -38,7 +38,7 @@
  */
 
 
-package com.sun.nio.zipfs;
+package no.s11.zipfs;
 
 import java.nio.file.DirectoryStream;
 import java.nio.file.ClosedDirectoryStreamException;
@@ -47,6 +47,9 @@ import java.nio.file.Path;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.io.IOException;
+
+import com.sun.nio.zipfs.ZipFileSystem;
+import com.sun.nio.zipfs.ZipPath;
 
 /**
  *

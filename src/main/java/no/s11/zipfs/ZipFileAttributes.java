@@ -39,13 +39,16 @@
 
 
 
-package com.sun.nio.zipfs;
+package no.s11.zipfs;
 
 import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.FileTime;
 import java.util.Arrays;
 import java.util.Formatter;
-import static com.sun.nio.zipfs.ZipUtils.*;
+
+import com.sun.nio.zipfs.ZipFileSystem;
+
+import static no.s11.zipfs.ZipUtils.*;
 
 /**
  *

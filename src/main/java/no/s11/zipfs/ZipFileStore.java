@@ -38,7 +38,7 @@
  */
 
 
-package com.sun.nio.zipfs;
+package no.s11.zipfs;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -50,6 +50,12 @@ import java.nio.file.attribute.FileAttributeView;
 import java.nio.file.attribute.FileStoreAttributeView;
 import java.nio.file.attribute.BasicFileAttributeView;
 import java.util.Formatter;
+
+import com.sun.nio.zipfs.ZipFileAttributeView;
+import com.sun.nio.zipfs.ZipFileStore;
+import com.sun.nio.zipfs.ZipFileStoreAttributes;
+import com.sun.nio.zipfs.ZipFileSystem;
+import com.sun.nio.zipfs.ZipPath;
 
 /*
  *

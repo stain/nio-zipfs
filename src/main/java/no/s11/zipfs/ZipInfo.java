@@ -38,13 +38,17 @@
  */
 
 
-package com.sun.nio.zipfs;
+package no.s11.zipfs;
 
 import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.Map;
-import static com.sun.nio.zipfs.ZipConstants.*;
-import static com.sun.nio.zipfs.ZipUtils.*;
+
+import com.sun.nio.zipfs.ZipFileSystem;
+import com.sun.nio.zipfs.ZipFileSystemProvider;
+
+import static no.s11.zipfs.ZipConstants.*;
+import static no.s11.zipfs.ZipUtils.*;
 
 /**
  * Print all loc and cen headers of the ZIP file
