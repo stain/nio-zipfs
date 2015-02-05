@@ -16,7 +16,7 @@ class can be used to create a `FileSystem`, e.g:
 
 	   // locate file system by the legacy JAR URL syntax
 	   Map<String,?> env = Collections.emptyMap();
-	   URI uri = URI.create("jar:file:/mydir/foo.jar");
+	   URI uri = URI.create("zip:file:/mydir/foo.jar");
 	   FileSystem fs = FileSystems.newFileSystem(uri, env);
 
 Once a FileSystem is created then classes in the 
@@ -28,17 +28,22 @@ can be used to access files in the zip/JAR file, eg:
 
 See [Demo.java](src/test/java/no/s11/zipfs/Demo.java) for more interesting usages.
 
+# Usage
+
+
 
 # License
 
 **License**: [BSD 3-Clause](http://opensource.org/licenses/BSD-3-Clause)
 
-Copyright (c) 2015 University of Manchester, UK.
-Copyright (c) 2009, 2012, Oracle and/or its affiliates. 
+- Copyright (c) 2015 University of Manchester, UK.
+- Copyright (c) 2009, 2012, Oracle and/or its affiliates. 
+
 All rights reserved.  
 
 Based on the zipfs demo of OpenJDK 8 by Oracle, distributed
 under a [BSD 3-Clause license](LICENSE).
+
 
 ## Relation to OpenJDK
 
@@ -56,8 +61,9 @@ Since OpenJDK 9,
 [zipfs is included in the main OpenJDK codebase](http://hg.openjdk.java.net/jdk9/dev/jdk/file/b8e8497c541c/src/jdk.zipfs/share/classes/jdk/nio/zipfs), 
 but now covered by the GPL license.
 
-This code in nio-zipfs is only based on the OpenJDK 8 and remains licensed under BSD 3-Clause, 
-which makes it compatible with other open source licenses like Apache Software License 2.0,
+This code in *nio-zipfs* is only based on the OpenJDK 8 demo code,
+and remains licensed under BSD 3-Clause, which makes it compatible with 
+other open source licenses like Apache Software License 2.0,
 provided you retain the notices in the files [NOTICE](NOTICE) and [LICENSE](LICENSE).  
 
 

@@ -361,7 +361,7 @@ public class Demo {
 
     private static FileSystemProvider getZipFSProvider() {
         for (FileSystemProvider provider : FileSystemProvider.installedProviders()) {
-            if ("jar".equals(provider.getScheme()))
+            if ("zip".equals(provider.getScheme()))
                 return provider;
         }
         return null;

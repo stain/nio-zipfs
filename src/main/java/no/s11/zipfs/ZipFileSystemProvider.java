@@ -81,13 +81,14 @@ import java.util.zip.ZipError;
 public class ZipFileSystemProvider extends FileSystemProvider {
 
 
-    private final Map<Path, ZipFileSystem> filesystems = new HashMap<>();
+    public static final String SCHEME = "zip";
+	private final Map<Path, ZipFileSystem> filesystems = new HashMap<>();
 
     public ZipFileSystemProvider() {}
 
     @Override
     public String getScheme() {
-        return "jar";
+        return SCHEME;
     }
 
     protected Path uriToPath(URI uri) {
@@ -96,7 +97,7 @@ public class ZipFileSystemProvider extends FileSystemProvider {
             throw new IllegalArgumentException("URI scheme is not '" + getScheme() + "'");
         }
         try {
-            // only support legacy JAR URL syntax  jar:{uri}!/{entry} for now
+            // only support legacy JAR URL syntax  zip:{uri}!/{entry} for now
             String spec = uri.getRawSchemeSpecificPart();
             int sep = spec.indexOf("!/");
             if (sep != -1)
