@@ -4,6 +4,32 @@
 is a file system provider that treats the contents of a zip or
 JAR file as a [java.nio.file.FileSystem](http://docs.oracle.com/javase/7/docs/api/java/nio/file/FileSystem.html).
 
+# Building
+
+To build, you will need Oracle JDK 7/OpenJDK 7 or newer, 
+together with [Apache Maven 3.x](http://maven.apache.org/download.html). 
+
+This implementation is tested with Maven 3.2, openjdk7 and openjdk8.
+
+To build:
+
+	mvn clean install
+
+To then use from a Maven project, use:
+
+	<dependency>
+		<groupId>no.s11.zipfs</groupId>
+		<artifactId>nio-zipfs</artifactId>
+		<version>8.60.0-SNAPSHOT</version>	
+	</dependency>
+	
+Check [pom.xml](pom.xml) to find the latest `<version>` number.	
+
+TODO: Set up Maven snapshot repository.
+
+
+# Usage
+
 The factory methods defined by the 
 [java.nio.file.FileSystems](http://docs.oracle.com/javase/7/docs/api/java/nio/file/FileSystems.html) 
 class can be used to create a `FileSystem`, e.g:
@@ -27,9 +53,6 @@ can be used to access files in the zip/JAR file, eg:
 	   InputStream in = mf.newInputStream();
 
 See [Demo.java](src/test/java/no/s11/zipfs/Demo.java) for more interesting usages.
-
-# Usage
-
 
 
 # License
