@@ -1,0 +1,7 @@
+# nio-zipfs
+Copyright (c) 2015 University of Manchester, UK.
+Copyright (c) 2009, 2012, Oracle and/or its affiliates. 
+All rights reserved.  
+
+Based on the zipfs demo of OpenJDK 8 by Oracle, distributed
+under a BSD 3-Clause license.
