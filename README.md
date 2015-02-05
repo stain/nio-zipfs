@@ -30,19 +30,24 @@ TODO: Set up Maven snapshot repository.
 
 # Usage
 
+If `nio-zipfs` is on the Java classpath, then it should be discovered by the
+ServiceLoader mechanism in [FileSystemProvider](http://docs.oracle.com/javase/7/docs/api/java/nio/file/spi/FileSystemProvider.html).
+
+*WARNING*: If [java.nio.file.spi.FileSystemProvider.installedProviders()
+
 The factory methods defined by the 
 [java.nio.file.FileSystems](http://docs.oracle.com/javase/7/docs/api/java/nio/file/FileSystems.html) 
-class can be used to create a `FileSystem`, e.g:
+class can be used to create a `ZipFileSystem` for an existing ZIP file:
 
 	   // use file type detection
-	   Path jarfile = Paths.get("foo.jar");
-	   FileSystem fs = FileSystems.newFileSystem(jarfile, null);
+	   Path zipfile = Paths.get("foo.zip");
+	   FileSystem fs = FileSystems.newFileSystem(zipfile, null);
 
 -or-:
 
-	   // locate file system by the legacy JAR URL syntax
+	   // locate file system by the legacy ZIP URL syntax
 	   Map<String,?> env = Collections.emptyMap();
-	   URI uri = URI.create("zip:file:/mydir/foo.jar");
+	   URI uri = URI.create("zip:file:/mydir/foo.zip");
 	   FileSystem fs = FileSystems.newFileSystem(uri, env);
 
 Once a FileSystem is created then classes in the 
@@ -73,7 +78,7 @@ For details, see the files [NOTICE](NOTICE) and [LICENSE](LICENSE).
 ## Relation to OpenJDK
 
 This code is based on the 
-[demo/nio/zipfs](http://hg.openjdk.java.net/jdk8u/jdk8u/jdk/file/c10fd784956c/src/share/demo/nio/zipfs) 
+[demo/nio/zipfs](http://hg.openjdk.java.net/jdk8u/jdk8u/jdk/file/default/src/share/demo/nio/zipfs) 
 code from [OpenJDK 8](http://openjdk.java.net/projects/jdk8/) which has been distributed
 with Open JDK since 7u20.
 
@@ -83,7 +88,7 @@ the zipfs code was
 [distributed under the BSD 3-Clause license](http://hg.openjdk.java.net/jdk8u/jdk8u/jdk/file/c10fd784956c/src/share/demo/nio/zipfs/src/com/sun/nio/zipfs/ZipFileSystemProvider.java#l2).
 
 Since OpenJDK 9, 
-[zipfs is included in the main OpenJDK codebase](http://hg.openjdk.java.net/jdk9/dev/jdk/file/b8e8497c541c/src/jdk.zipfs/share/classes/jdk/nio/zipfs), 
+[zipfs is included in the main OpenJDK codebase](http://hg.openjdk.java.net/jdk9/dev/jdk/file/default/src/jdk.zipfs/share/classes/jdk/nio/zipfs), 
 but now covered by the GPL license.
 
 This code in *nio-zipfs* is only based on the OpenJDK 8 demo code,
@@ -92,4 +97,24 @@ other open source licenses like Apache Software License 2.0,
 provided you retain the notices in the files [NOTICE](NOTICE) and [LICENSE](LICENSE).  
 
 
+# Contributing
 
+If you have a question, feature request or think you found a bug, 
+please raise a [GitHub issue](https://github.com/stain/nio-zipfs/issues).
+
+To suggest changes or improvements to the code, please raise 
+a [GitHub pull request](https://github.com/stain/nio-zipfs/pulls). 
+The whole purpose of moving this code out of OpenJDK is to be able
+to improve it independently of the OpenJDK release schedule. 
+
+Please make sure that your patch is a clean contribution intellectual-property-wise, e.g. 
+that you or your employer owns the copyright or that you are allowed to contribute it
+under the BSD 3-Clause license. This means that you *cannot* contribute any code from the
+[upstream OpenJDK 9 code base]((http://hg.openjdk.java.net/jdk9/dev/jdk/file/default/src/jdk.zipfs/share/classes/jdk/nio/zipfs)
+as it is now licensed under GPL. Patches from 
+[upstream OpenJDK 8](http://hg.openjdk.java.net/jdk8u/jdk8u/jdk/file/default/src/share/demo/nio/zipfs) )
+are however allowed, as long as they still have the BSD license headers. 
+
+There's no mailing list, but you can 
+[watch this repository](https://github.com/stain/nio-zipfs/subscription) to be included
+when issues and pull requests are raised.
