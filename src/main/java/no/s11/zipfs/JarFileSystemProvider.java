@@ -39,17 +39,11 @@
 
 package no.s11.zipfs;
 
-import java.nio.file.*;
-import java.nio.file.spi.*;
-import java.nio.file.attribute.*;
-import java.nio.file.spi.FileSystemProvider;
 import java.net.URI;
-import java.io.IOException;
 import java.net.URISyntaxException;
-import java.nio.channels.FileChannel;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.nio.file.FileSystem;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import com.sun.nio.zipfs.ZipFileSystemProvider;
 

@@ -46,8 +46,6 @@ import java.nio.file.attribute.FileTime;
 import java.util.Arrays;
 import java.util.Formatter;
 
-import static no.s11.zipfs.ZipUtils.*;
-
 /**
  *
  * @author  Xueming Shen, Rajendra Gutupalli,Jaya Hangal

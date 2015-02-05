@@ -41,8 +41,10 @@
 
 package no.s11.zipfs;
 
-import java.nio.file.attribute.*;
 import java.io.IOException;
+import java.nio.file.attribute.BasicFileAttributeView;
+import java.nio.file.attribute.FileAttributeView;
+import java.nio.file.attribute.FileTime;
 import java.util.LinkedHashMap;
 import java.util.Map;
 

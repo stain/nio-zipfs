@@ -40,12 +40,48 @@
 
 package no.s11.zipfs;
 
+import static no.s11.zipfs.ZipConstants.CENATT;
+import static no.s11.zipfs.ZipConstants.CENATX;
+import static no.s11.zipfs.ZipConstants.CENCOM;
+import static no.s11.zipfs.ZipConstants.CENCRC;
+import static no.s11.zipfs.ZipConstants.CENDSK;
+import static no.s11.zipfs.ZipConstants.CENEXT;
+import static no.s11.zipfs.ZipConstants.CENFLG;
+import static no.s11.zipfs.ZipConstants.CENHDR;
+import static no.s11.zipfs.ZipConstants.CENHOW;
+import static no.s11.zipfs.ZipConstants.CENLEN;
+import static no.s11.zipfs.ZipConstants.CENNAM;
+import static no.s11.zipfs.ZipConstants.CENOFF;
+import static no.s11.zipfs.ZipConstants.CENSIG;
+import static no.s11.zipfs.ZipConstants.CENSIZ;
+import static no.s11.zipfs.ZipConstants.CENTIM;
+import static no.s11.zipfs.ZipConstants.CENVEM;
+import static no.s11.zipfs.ZipConstants.CENVER;
+import static no.s11.zipfs.ZipConstants.EXTID_EXTT;
+import static no.s11.zipfs.ZipConstants.EXTID_NTFS;
+import static no.s11.zipfs.ZipConstants.EXTID_ZIP64;
+import static no.s11.zipfs.ZipConstants.LG;
+import static no.s11.zipfs.ZipConstants.LL;
+import static no.s11.zipfs.ZipConstants.LOCCRC;
+import static no.s11.zipfs.ZipConstants.LOCEXT;
+import static no.s11.zipfs.ZipConstants.LOCFLG;
+import static no.s11.zipfs.ZipConstants.LOCHDR;
+import static no.s11.zipfs.ZipConstants.LOCHOW;
+import static no.s11.zipfs.ZipConstants.LOCLEN;
+import static no.s11.zipfs.ZipConstants.LOCNAM;
+import static no.s11.zipfs.ZipConstants.LOCSIG;
+import static no.s11.zipfs.ZipConstants.LOCSIZ;
+import static no.s11.zipfs.ZipConstants.LOCTIM;
+import static no.s11.zipfs.ZipConstants.LOCVER;
+import static no.s11.zipfs.ZipConstants.SH;
+import static no.s11.zipfs.ZipConstants.ZIP64_MINVAL;
+import static no.s11.zipfs.ZipUtils.dosToJavaTime;
+import static no.s11.zipfs.ZipUtils.unixToJavaTime;
+import static no.s11.zipfs.ZipUtils.winToJavaTime;
+
 import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.Map;
-
-import static no.s11.zipfs.ZipConstants.*;
-import static no.s11.zipfs.ZipUtils.*;
 
 /**
  * Print all loc and cen headers of the ZIP file
