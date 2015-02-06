@@ -4,6 +4,10 @@
 is a file system provider that treats the contents of a zip or
 JAR file as a [java.nio.file.FileSystem](http://docs.oracle.com/javase/7/docs/api/java/nio/file/FileSystem.html).
 
+# Related projects
+
+[zipfilesystem-standalone](https://github.com/marschall/zipfilesystem-standalone) by Philippe Marschall.
+
 # Building
 
 To build, you will need Oracle JDK 7/OpenJDK 7 or newer, 
